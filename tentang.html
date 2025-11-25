@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami | FIVE FRESH</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #e8f7ef, #c9f1db, #e8f7ef);
+      color: #034d2f;
+      overflow-x: hidden;
+    }
+
+    /* Floating Home Button */
+    .home-btn {
+      position: fixed;
+      top: 22px;
+      left: 22px;
+      width: 62px;
+      height: 62px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 6px 18px rgba(0,0,0,0.15);
+      transition: 0.3s;
+      z-index: 999;
+    }
+
+    .home-btn svg {
+      width: 32px;
+      height: 32px;
+      stroke: #026b3d;
+      opacity: 0.9;
+    }
+
+    .home-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.25);
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 90px 20px 60px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+      font-weight: 700;
+      color: #026b3d;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 20px;
+      opacity: 0.8;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 16px 0;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid #d4eedf;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #026b3d;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      background: #0e8b54;
+      color: #fff;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Content Glass Card */
+    .content-wrapper {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px 45px;
+      background: rgba(255,255,255,0.75);
+      border-radius: 24px;
+      backdrop-filter: blur(14px);
+      box-shadow: 0px 10px 28px rgba(0,0,0,0.08);
+      animation: fadeIn 1s ease;
+    }
+
+    .content-wrapper h2 {
+      font-size: 30px;
+      color: #026b3d;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .content-wrapper p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #034d2f;
+    }
+
+    /* Team Section */
+    .team-section {
+      margin-top: 50px;
+    }
+
+    .team-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+    }
+
+    .team-card {
+      width: 100%;
+      max-width: 700px;
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.12);
+      transition: 0.3s;
+    }
+
+    .team-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0px 10px 28px rgba(0,0,0,0.25);
+    }
+
+    .team-card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 15px;
+    }
+
+    .team-card h3 {
+      margin: 8px 0;
+      font-size: 22px;
+      color: #026b3d;
+      font-weight: 700;
+    }
+
+    .team-card p {
+      font-size: 15px;
+      opacity: 0.7;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 25px;
+      background: #025b35;
+      color: white;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Icon Home -->
+  <a href="index.html" class="home-btn">
+    <!-- Aesthetic Home Icon (SVG) -->
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+      <path d="M3 11l9-8 9 8"/>
+      <path d="M5 12v8a1 1 0 0 0 1 1h4v-5h4v5h4a1 1 0 0 0 1-1v-8"/>
+    </svg>
+  </a>
+
+  <!-- Header -->
+  <header>
+    <h1>Tentang FIVE FRESH</h1>
+    <p>Kesegaran alami dengan sentuhan inovasi modern 🌿</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="produk.html">Produk</a>
+    <a href="tentang.html" class="active">Tentang Kami</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content-wrapper">
+    <h2>Siapa Kami?</h2>
+    <p>FIVE FRESH adalah brand lokal yang berfokus pada produk berbahan alami, sehat, dan segar. Kami membawa konsep “fresh lifestyle” untuk membuat kebiasaan sehat terasa lebih menyenangkan, mudah, dan penuh inovasi.</p>
+
+    <h2>Visi & Misi</h2>
+    <p><strong>Visi:</strong> Menjadi brand minuman sehat paling terpercaya dan inovatif di Indonesia.</p>
+    <p><strong>Misi:</strong> Menghadirkan produk berkualitas tinggi, tanpa pengawet, serta ramah bagi semua usia.</p>
+
+    <!-- Team Section -->
+    <div class="team-section">
+      <h2>Tim Kami</h2>
+      <p>Kami didukung oleh profesional yang berpengalaman dalam produksi, kualitas, dan inovasi produk.</p>
+
+      <div class="team-container">
+
+        <div class="team-card">
+          <img src="img/tim.jpg" alt="Foto Landscape Tim">
+          <h3>FIVE FRESH</h3>
+          <p>Founder</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 FIVE FRESH — Fresh Lifestyle for Everyone
+  </footer>
+
+</body>
+</html>

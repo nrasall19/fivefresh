@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak | FIVE FRESH</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    /* ===== BACKGROUND GRADIENT ===== */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #d4f7d2, #b7efcf, #9ee8c0);
+      background-size: 300% 300%;
+      animation: gradientFlow 12s ease infinite;
+      color: #2b4a38;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ===== TOMBOL HOME BULAT ===== */
+    .home-btn-round {
+      position: fixed;
+      top: 18px;
+      left: 18px;
+      width: 55px;
+      height: 55px;
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(8px);
+      border-radius: 50%;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #1e5b3c;
+      z-index: 1000;
+      cursor: pointer;
+      transition: 0.35s ease;
+    }
+
+    .home-btn-round:hover {
+      background: rgba(255, 255, 255, 0.85);
+      transform: scale(1.12) rotate(8deg);
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(8px);
+      border-bottom: 2px solid #b6e8cb;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 5px;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      text-align: center;
+      padding: 15px 0;
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    nav a {
+      margin: 0 25px;
+      font-weight: 600;
+      color: #275c37;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ff8fa3;
+      transform: translateY(-2px);
+    }
+
+    /* ===== FLOATING BUBBLE FRUITS ===== */
+    .bubble {
+      position: fixed;
+      bottom: -80px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      animation: rise 10s infinite ease-in-out;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes rise {
+      from { transform: translateY(0) scale(1); opacity: 1; }
+      to { transform: translateY(-120vh) scale(1.6); opacity: 0; }
+    }
+
+    /* ===== SECTION ===== */
+    section {
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .contact-info {
+      display: inline-block;
+      padding: 25px 40px;
+      background: #ffffff;
+      border-radius: 25px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 40px;
+    }
+
+    .contact-info p {
+      margin: 12px 0;
+      font-size: 18px;
+    }
+
+    form {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 420px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #c9ebd7;
+      background: #f6fff8;
+      transition: 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #8ed3a8;
+      box-shadow: 0 0 6px rgba(98, 188, 132, 0.4);
+      outline: none;
+      background: #ffffff;
+    }
+
+    button {
+      background: linear-gradient(90deg, #8ee3aa, #b3f4d0);
+      padding: 14px;
+      border: none;
+      color: #204d32;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #bfffe1, #9debba);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
+      margin-top: 60px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 22px;
+      color: #274c38;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== TOMBOL HOME BULAT ===== -->
+  <a href="index.html" class="home-btn-round">
+    <i class="fas fa-home"></i>
+  </a>
+
+  <header>
+    <h1>Hubungi Kami 💚</h1>
+    <p>Kami siap menerima pesanmu dengan sepenuh hati 🍃</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="produk.html">Produk</a>
+    <a href="tentang.html">Tentang Kami</a>
+    <a href="#" class="active">Kontak</a>
+  </nav>
+
+  <!-- ===== Animated Bubble Fruits ===== -->
+  <script>
+    const fruits = ["🍏","🍐","🍋","🍓","🍇","🍉","🍒"];
+    
+    for (let i = 0; i < 15; i++) {
+      let bubble = document.createElement("div");
+      bubble.className = "bubble";
+      bubble.style.left = Math.random() * 100 + "vw";
+      bubble.style.animationDuration = (8 + Math.random() * 5) + "s";
+      bubble.innerHTML = fruits[Math.floor(Math.random() * fruits.length)];
+      document.body.appendChild(bubble);
+
+      setTimeout(() => bubble.remove(), 14000);
+    }
+  </script>
+
+  <section>
+    <h2>Kontak Langsung</h2>
+
+    <div class="contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> Talaga Bestari</p>
+      <p><i class="fas fa-phone"></i> 0896-7379-7968</p>
+      <p><i class="fas fa-envelope"></i> fivefresh@gmail.com</p>
+      <p><i class="fab fa-instagram"></i> <a href="#">@five_fres25</a></p>
+    </div>
+
+    <h3>Kirim Pesan 💌</h3>
+
+    <form onsubmit="kirimPesan(event)">
+      <input type="text" id="nama" placeholder="Nama Kamu" required>
+      <input type="email" id="email" placeholder="Email Kamu" required>
+      <textarea id="pesan" rows="4" placeholder="Tulis pesan kamu..." required></textarea>
+      <button type="submit">Kirim Sekarang 🚀</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 FIVE FRESH | Fresh Everyday 🌿
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    function kirimPesan(event) {
+      event.preventDefault();
+      const nama = document.getElementById('nama').value;
+      const email = document.getElementById('email').value;
+      const pesan = document.getElementById('pesan').value;
+
+      const nomor = "6289673797968";
+      const text = `Halo Five Fresh! 🌿\nSaya *${nama}* (${email}).\n\nPesan:\n${pesan}`;
+      const url = `https://wa.me/${nomor}?text=${encodeURIComponent(text)}`;
+
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
