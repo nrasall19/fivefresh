@@ -60,12 +60,11 @@
       opacity: 0.95;
     }
 
-    /* NAVBAR */
+    /* NAVBAR RESPONSIVE */
     nav {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 35px;
       padding: 12px 25px;
       background: white;
       border-bottom: 1px solid #e2e8f0;
@@ -75,7 +74,7 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
-    /* Logo di navbar */
+    /* LOGO */
     .nav-logo {
       position: absolute;
       left: 20px;
@@ -93,7 +92,13 @@
       background: #fff;
     }
 
-    nav a {
+    /* MENU */
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
       color: var(--emerald);
       text-decoration: none;
       font-weight: 600;
@@ -102,17 +107,52 @@
       transition: 0.3s ease;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       color: var(--emerald-light);
     }
 
-    nav a.active {
+    .nav-links a.active {
       background: var(--emerald);
       color: white;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
-    /* HERO */
+    /* HAMBURGER BTN */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: var(--emerald);
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+    }
+
+    /* RESPONSIVE (HP) */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+        display: none;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+
+    /* HERO SECTION */
     section {
       text-align: center;
       padding: 90px 20px;
@@ -187,15 +227,18 @@
 
   <!-- NAVBAR -->
   <nav>
-    <!-- LOGO -->
     <div class="nav-logo">
       <img src="img/logo.jpg" alt="Logo Five Fresh">
     </div>
 
-    <a href="index.html" class="active">Beranda</a>
-    <a href="produk.html">Produk</a>
-    <a href="tentang.html">Tentang Kami</a>
-    <a href="kontak.html">Kontak</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="menu">
+      <a href="index.html" class="active">Beranda</a>
+      <a href="produk.html">Produk</a>
+      <a href="tentang.html">Tentang Kami</a>
+      <a href="kontak.html">Kontak</a>
+    </div>
   </nav>
 
   <!-- HERO -->
@@ -210,6 +253,12 @@
   <footer>
     © 2025 FIVE FRESH — Fresh Lifestyle for Everyone
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
